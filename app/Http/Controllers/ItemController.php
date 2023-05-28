@@ -17,6 +17,17 @@ class ItemController extends Controller
 
         $items = [];
 
+        for($i = 1; $i <= 50; $i++) {
+
+            $item = [
+
+                'price' => rand(5,100),
+                'instock' => rand(0,1) == 1 ? 'yes' : 'no'
+            ];
+
+
+        }
+
         $input = [
             'title' => 'Demo Title',
             'data' => [
