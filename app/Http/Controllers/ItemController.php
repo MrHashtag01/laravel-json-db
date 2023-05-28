@@ -25,21 +25,15 @@ class ItemController extends Controller
                 'instock' => rand(0,1) == 1 ? 'yes' : 'no'
             ];
 
+            $items[] = $item;
 
         }
 
-        $input = [
-            'title' => 'Demo Title',
-            'data' => [
-                '1' => 'One',
-                '2' => 'Two',
-                '3' => 'Three'
-            ]
-        ];
-  
-        $item = Item::create($input);
-  
-        dd($item->data);
-  
+        $Item::insert($items);
+
+        return '50 new rows created.';
+
+        }
+
     }
-}
+
