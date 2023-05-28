@@ -25,7 +25,12 @@ class ItemController extends Controller
                 'instock' => rand(0,1) == 1 ? 'yes' : 'no'
             ];
 
-            $items[] = ['data' => json_encode($data)];
+            $items[] = [
+                
+                'title' => 'Demo Title',
+                'data' => json_encode($data)
+                
+            ];
 
         }
 
