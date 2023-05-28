@@ -14,31 +14,20 @@ class ItemController extends Controller
      */
     public function index()
     {
+        for ($i = 1; $i <=50; $i++) {
 
-        $items = [];
-
-        for($i = 1; $i <= 50; $i++) {
-
-            $data = [
-
+        $input = [
+            'title' => 'Demo Title',
+            'data' => [
                 'price' => rand(5,100),
-                'instock' => rand(0,1) == 1 ? 'yes' : 'no'
-            ];
+                'instock' =>(rand(0,1) === 1) ? 'yes' : 'no'
 
-            $items[] = [
-                
-                'title' => 'Demo Title',
-                'data' => json_encode($data)
-                
-            ];
-
+            ]
+        ];
+  
+        $item = Item::create($input);
         }
-
-        Item::insert($items);
-
         return '50 new rows created.';
-
-        }
-
+  
     }
-
+}
