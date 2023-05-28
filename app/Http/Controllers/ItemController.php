@@ -19,17 +19,17 @@ class ItemController extends Controller
 
         for($i = 1; $i <= 50; $i++) {
 
-            $item = [
+            $data = [
 
                 'price' => rand(5,100),
                 'instock' => rand(0,1) == 1 ? 'yes' : 'no'
             ];
 
-            $items[] = $item;
+            $items[] = ['data' => $data];
 
         }
 
-        $Item::insert($items);
+        Item::insert($items);
 
         return '50 new rows created.';
 
