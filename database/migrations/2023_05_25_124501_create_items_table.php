@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->default('Default Title');
+            $table->string('title')->default('Demo Title');
             $table->json('data');
             $table->timestamps();
         });
