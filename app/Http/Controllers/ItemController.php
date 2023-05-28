@@ -14,6 +14,9 @@ class ItemController extends Controller
      */
     public function index()
     {
+
+        $items = [];
+
         $input = [
             'title' => 'Demo Title',
             'data' => [
